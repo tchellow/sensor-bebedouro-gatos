@@ -1,0 +1,12 @@
+# Configurações locais do Claude Code
+.claude/settings.local.json
+
+# Saídas de compilação
+build/
+*.bin
+*.elf
+
+# Arquivos do Google Drive / sistema
+desktop.ini
+Thumbs.db
+.DS_Store

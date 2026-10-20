@@ -1,0 +1,49 @@
+{
+  "env": {
+    "esp8266Core": "${env:LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/3.1.2",
+    "esp8266Gcc": "${env:LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/3.1.0-gcc10.3-e5f9fec",
+    "arduinoLibs": "${env:USERPROFILE}/Documents/Arduino/libraries"
+  },
+  "configurations": [
+    {
+      "name": "ESP8266 (ESP-01)",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${esp8266Core}/cores/esp8266/**",
+        "${esp8266Core}/variants/generic",
+        "${esp8266Core}/libraries/**",
+        "${esp8266Core}/tools/sdk/include",
+        "${esp8266Core}/tools/sdk/lwip2/include",
+        "${esp8266Core}/tools/sdk/libc/xtensa-lx106-elf/include",
+        "${arduinoLibs}/ArduinoJson/src",
+        "${arduinoLibs}/VL53L0X"
+      ],
+      "forcedInclude": [
+        "${esp8266Core}/cores/esp8266/Arduino.h"
+      ],
+      "defines": [
+        "ARDUINO=10819",
+        "ARDUINO_ARCH_ESP8266",
+        "ARDUINO_ESP8266_GENERIC",
+        "ESP8266",
+        "F_CPU=80000000L",
+        "LWIP_OPEN_SRC",
+        "TCP_MSS=536",
+        "LWIP_FEATURES=1",
+        "LWIP_IPV6=0",
+        "__ets__",
+        "ICACHE_FLASH",
+        "_GNU_SOURCE",
+        "NONOSDK22x_190703=1"
+      ],
+      "compilerPath": "${esp8266Gcc}/bin/xtensa-lx106-elf-g++.exe",
+      "cStandard": "gnu17",
+      "cppStandard": "gnu++17",
+      "intelliSenseMode": "gcc-x86",
+      "browse": {
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
+}
